@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Caveat:400,700|Gochi+Hand");
+
 .welcome ul {
   width: 90%;
   transform: translate(0, -50%);
@@ -31,7 +33,7 @@
 .welcome ul li:after {
   transition: transform 0.25s ease-in-out;
   content: attr(data-letter);
-  font-family: sans-serif;
+  font-family: "Caveat", cursive;
   font-weight: 70;
   font-size: 1px;
   position: absolute;
