@@ -1,23 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import "./Text.css";
 
 export default function Text() {
   const [activeClass, setClass] = useState(0);
-  const classList = ["allRepeat", "sets", "bliking","text"];
-  const listLength = classList.length;
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setClass((prevIsActive) =>
-        prevIsActive === listLength - 1 ? 0 : prevIsActive + 1
-      );
-    }, 5000);
+  const [functionClass, setFunctionClass] = useState(true);
 
-    // Clear the interval on component unmount
-    return () => clearInterval(intervalId);
-  }, []);
+  const classList = ["sets", "allRepeat", "bliking", "myspan"];
+  const listLength = classList.length;
+
+  function indexAppend() {
+    setTimeout(() => {
+      if (activeClass !== listLength - 1) {
+        setClass((prevIsActive) => prevIsActive + 1);
+      } else {
+        setClass(() => listLength - 1)
+      }
+    }, 5000);
+  }
+  console.log(classList[activeClass]);
   return (
     <>
+      {indexAppend()}
       <div className="alignDiv">
         <h1 className={classList[activeClass]}>
           <span>O</span>

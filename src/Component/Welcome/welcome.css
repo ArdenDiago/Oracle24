@@ -5,9 +5,9 @@
   transform: translate(0, -50%);
   position: absolute;
   text-align: center;
-  font-size: 0;
+  font-size: 20px;
   left: 0;
-  top: 30%;
+  top: 20%;
 }
 
 .welcome ul li {
@@ -35,7 +35,7 @@
   content: attr(data-letter);
   font-family: "Caveat", cursive;
   font-weight: 70;
-  font-size: 1px;
+  font-size: 10px;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -46,7 +46,7 @@
 @media screen and (orientation: landscape) {
   .welcome ul li:before,
   .welcome ul li:after {
-    font-size: 3vh;
+    font-size: 10vh;
   }
 }
 
