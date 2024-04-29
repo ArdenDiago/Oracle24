@@ -3,16 +3,16 @@ import LiveBG from "./Component/LiveBG/LiveBG";
 import Welcome from "./Component/Welcome/Welcome";
 import Test from "./Component/test/test";
 import Text from "./Component/Text/Text";
-
+import Button from "./Component/Button/Button";
+  
 function App() {
   return (
     <>
       <LiveBG />
-      {/* <Background /> */}
+      <Background />
       <Text />
-
       <Welcome />
-      {/* <Test /> */}
+      <Button />
     </>
   );
 }
