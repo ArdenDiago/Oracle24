@@ -10,7 +10,7 @@ body {
 }
 .myTer {
   color: rgb(9, 255, 0);
-  display: block;
+  display: flex;
   padding-left: 30px;
   overflow: hidden;
   position: absolute;
@@ -21,6 +21,14 @@ body {
 .myTer h1 {
   font-family: "Cascadia Code", sans-serif;
   font-size: 60px;
+}
+.myTer> p {
+  font-family: "Cascadia Code", sans-serif;
+  font-size: 60px;
+  color: white;
+  position: relative;
+  top: -20px;
+  left: 5px;
 }
 
 .header-nav {
@@ -43,4 +51,41 @@ body {
     background-color: green;
     border-radius: 50%;
     margin: auto;
+}
+
+.text { 
+  position: relative;
+  display: flex;
+  font-family: Monaco, Arial, Helvetica, sans-serif;
+  line-height: 60px;
+  font-size: 60px;
+  color: white;
+  min-width: 360px;
+  top: 99px;
+  left: 10px;
+}
+
+.text::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  display: inline-block;
+  background-color: #606060;
+  vertical-align: top;
+  width: 10px;
+  height: 60px;
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
 }

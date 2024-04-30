@@ -1,15 +1,21 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Background2.css";
 import Name from "./Name";
 
 export default function Background() {
+  const [command, setCommand] = useState("");
+
   useEffect(() => {
     document.addEventListener("keydown", detectKeyDown, true);
   }, []);
   const detectKeyDown = (e) => {
-      if (e.key === "ArrowDown") {
-        console.log('Down');
-      }
+    if (e.key === "ArrowDown") {
+      console.log("Down");
+      setCommand(() => "");
+    } else if (e.key === "ArrowUp") {
+      setCommand(() => "man oracle");
+      console.log("up");
+    }
   };
   return (
     <>
@@ -27,6 +33,8 @@ export default function Background() {
         </div>
       </div>
       <div className="myTer">
+        <h1>Pegasus@Localhost:</h1> <p>{command}</p>
+        <div className="text"></div>
         <h1>Pegasus@Localhost: </h1>
         <Name x="Name" y = "bue"></Name>
       </div>
