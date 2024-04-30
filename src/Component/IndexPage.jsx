@@ -1,11 +1,8 @@
-import Background from "./IndexElements/Background/Background";
-import Button from "./IndexElements/Button/Button";
+import Background from "./IndexElements/Background/Background2";
 
 export default function IndexPage() {
   return (
     <>
-      <Button />
-
       <Background />
     </>
   );
