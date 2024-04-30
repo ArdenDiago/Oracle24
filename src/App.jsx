@@ -1,15 +1,10 @@
-import LiveBG from "./Component/LiveBG/LiveBG";
-import Welcome from "./Component/Welcome/Welcome";
-import Text from "./Component/Text/Text";
-import Button from "./Component/Button/Button";
-
+import WelcomeToOracle from "./Component/WelcomeToOracle";
+import IndexPage from "./Component/IndexPage";
 function App() {
   return (
     <>
-      {/* <LiveBG /> */}
-      {/* <Text /> */}
-      {/* <Welcome /> */}
-      <Button />
+      {/* <WelcomeToOracle /> */}
+      <IndexPage />
     </>
   );
 }
