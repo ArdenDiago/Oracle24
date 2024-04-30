@@ -1,4 +1,5 @@
 import "./Background2.css";
+import Name from "./Name";
 
 export default function Background() {
   return (
@@ -18,6 +19,7 @@ export default function Background() {
       </div>
       <div className="myTer">
         <h1>Pegasus@Localhost: </h1>
+        <Name x="Name" y = "bue"></Name>
       </div>
     </>
   );
