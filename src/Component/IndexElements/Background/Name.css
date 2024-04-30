@@ -1,0 +1,12 @@
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+.Name, .ls{
+    top:1px ;
+    color: white;
+    margin: auto;
+    font-family: 'Cascadia Code', sans-serif;
+
+}
+.ls{
+    padding-left: 20px;
+}

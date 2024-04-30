@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Background2.css";
+import Name from "./Name";
 
 export default function Background() {
   const [command, setCommand] = useState("");
@@ -34,6 +35,8 @@ export default function Background() {
       <div className="myTer">
         <h1>Pegasus@Localhost:</h1> <p>{command}</p>
         <div className="text"></div>
+        <h1>Pegasus@Localhost: </h1>
+        <Name x="Name" y = "bue"></Name>
       </div>
     </>
   );
