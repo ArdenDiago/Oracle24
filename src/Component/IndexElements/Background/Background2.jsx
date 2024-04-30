@@ -1,6 +1,15 @@
+import { useEffect } from "react";
 import "./Background2.css";
 
 export default function Background() {
+  useEffect(() => {
+    document.addEventListener("keydown", detectKeyDown, true);
+  }, []);
+  const detectKeyDown = (e) => {
+      if (e.key === "ArrowDown") {
+        console.log('Down');
+      }
+  };
   return (
     <>
       <div className="header-nav">
