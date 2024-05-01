@@ -58,7 +58,7 @@ export default function Background() {
         </div>
         <div className="myTer">
           {/* <Line intruction={command} /> */}
-          <Name x="Name" y = "bue"></Name>
+          <Name x="Name" y = "Enter the digital playground, where the city's heartbeat syncs with the pulse of innovation. Welcome to the Techno Cultural Fest Oracle, where every pixel holds a secret and every line of code whispers prophecy. In this realm of digital liberation, where information is power and connection is key, we harness the power of technology to unlock the mysteries of tomorrow. So, fellow hackers, gear up, plug in, and let the revolution begin. Welcome to the  Oracle, where freedom reigns supreme in the digital age"></Name>
         </div>
       </div>
     </>

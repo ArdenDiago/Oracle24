@@ -1,32 +1,72 @@
-@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+@import url("https://fonts.cdnfonts.com/css/cascadia-code");
 
-.Name, .ls{
-    /* display: block; */
-    /* top: 20px; */
-    color: white;
-    margin: auto;
-    font-family: 'Cascadia Code', sans-serif;
-    text-align: left;
-    font-size: 60px;
+.Name,
+.ls {
+  /* display: block; */
+  /* top: 20px; */
+  color: white;
+  margin: auto;
+  font-family: "Cascadia Code", sans-serif;
+  text-align: left;
+  font-size: 60px;
 }
 .ls {
-    padding-left: 200px;
+  padding-right: 50px;
+  font-size: 30px;
+  padding-left: 200px;
 }
 .background-width {
-    width: 100%;
+  width: 100%;
 }
 .header-name {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    height: 50px;
-    top: -100px;
-    color: white;
-    align-items: center;
-    padding-bottom: 90px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 50px;
+  top: -100px;
+  color: white;
+  align-items: center;
+  padding-bottom: 90px;
 }
 .header-command-name {
-    font-size: 30px;
+  font-size: 30px;
 }
 .left {
-    justify-self: right;
+  justify-self: right;
+}
+
+/* my */
+.text-control-parent {
+    display: inline;
+    padding-left: 5px;
+}
+.text-control {
+    display: inline;
+    color: #606060;
+    background-color: #606060;
+    -webkit-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;  
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
