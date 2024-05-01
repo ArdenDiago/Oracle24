@@ -56,7 +56,11 @@
     color: aliceblue;
 }
 .circle-g > span, .circle-r > span {
+  top: 5px;
+  left: 7px;
   font-family: 'Courier New', Courier, monospace;
+  animation: none;
+
 }
 .circle-r {
   background-color: rgb(202, 1, 1);
