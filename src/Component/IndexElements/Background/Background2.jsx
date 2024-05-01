@@ -13,7 +13,11 @@ export default function Background() {
       setCommand(() => "");
     } else if (e.key === "ArrowUp") {
       setCommand(() => "man oracle");
-    } 
+    } else if (e.key === 'Enter') {
+      if (command === "man oracle") {
+        // pass
+      }
+    }
     console.log(e.key);
   };
   return (
@@ -22,6 +26,8 @@ export default function Background() {
         <div>
           <h1>Terminal Logo</h1>
         </div>
+        <div className="myTer">
+          {/* <Name x="Name" y = "bue"></Name> */}
         <div className="header-nav-text">
           <h1>Pegasus</h1>
         </div>
