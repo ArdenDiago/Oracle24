@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 import "./Name.css"
 export default function Name({x,y}){
-    return(<>
+    return(
     <div >
         
         <div className="Name">
@@ -11,9 +10,6 @@ export default function Name({x,y}){
             {y}
         </div>
        
-=======
-import "./Name.css";
->>>>>>> 4f8bcf014393ca95cfcfb435f7aa2bd41f0f2ac0
 
 import { useState, useEffect } from "react";
 
