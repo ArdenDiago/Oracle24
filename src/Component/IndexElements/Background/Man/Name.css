@@ -17,6 +17,7 @@
 }
 .background-width {
   width: 100%;
+  overflow: scroll; 
 }
 .header-name {
   display: grid;
@@ -33,6 +34,11 @@
 .left {
   justify-self: right;
 }
+
+/* my */
+.text-control-parent {
+    display: inline;
+    padding-left: 5px;
 
 /* my */
 .text-control-parent {
@@ -70,3 +76,28 @@
     opacity: 1;
   }
 }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
