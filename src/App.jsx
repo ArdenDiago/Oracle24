@@ -5,13 +5,18 @@ import "./Component/Name.css";
 import "./Component/Conformation.css";
 
 import Line from "./Component/Line/Line";
+import Synopsis from "./Component/Synopsis/Synopsis";
 
 import image from "./assets/Images/Logo/DeptLogo.svg";
+import audioFile from "./assets/Audio/BGSound.mp3";
+import declare from "./assets/Audio/Declare.mp3";
 
 function App() {
   const [page, setPage] = useState(0);
   function myFunction() {
-    setPage(() => !page);
+    setTimeout(() => {
+      setPage(() => !page);
+    }, 1000);
   }
   // -------------------------------
 
@@ -19,17 +24,14 @@ function App() {
     // Setting States for Controling the Behavior
     const [command, setCommand] = useState("");
     const [enterValue, setEnter] = useState(0);
+    const [lengthTargetFulfilled, setLengthTargetFulfilled] = useState(0);
 
     // data
-    let x = "Name";
-    let y =
-      "Enter the digital playground, where the city's heartbeat syncs with the pulse of innovation. Welcome to the Techno Cultural Fest Oracle, where every pixel holds a secret and every line of code whispers prophecy. In this realm of digital liberation, where information is power and connection is key, we harness the power of technology to unlock the mysteries of tomorrow. So, fellow hackers, gear up, plug in, and let the revolution begin. Welcome to the  Oracle, where freedom reigns supreme in the digital age";
 
     // Second
-    const [textValue, setTextValue] = useState("");
-    const [lengthTargetFulfilled, setLengthTargetFulfilled] = useState(0);
-    const lenOfText = y.length;
-    const timeout = 50;
+    const [parentName, setChangeParent] = useState(0);
+    let x = "Name";
+
     // Third
     const [keyValue, setKeyValue] = useState("");
     const [enterValueFinal, setEnterValueFinal] = useState(0);
@@ -57,16 +59,11 @@ function App() {
       }
     };
     // second
-    useEffect(() => {
-      setTimeout(() => {
-        if (textValue.length !== lenOfText) {
-          setTextValue((prevText) => prevText + y[textValue.length]); // Append character at the current length of textValue
-        } else {
-          setLengthTargetFulfilled(() => !lengthTargetFulfilled);
-        }
-      }, timeout);
-    }, [textValue, lenOfText, y]);
+
     // Third
+    // if (textValueIndex === lenOfText && !lengthTargetFulfilled) {
+    // setLengthTargetFulfilled(() => !lengthTargetFulfilled);
+    // }
 
     useEffect(() => {
       document.addEventListener("keypress", detectKey, true);
@@ -86,7 +83,11 @@ function App() {
         setChange(() => !change);
       }
     }
-
+    function parentClass() {
+      setTimeout(() => {
+        setChangeParent(1);
+      },1000);
+    }
     return (
       <>
         <div className="master-div">
@@ -126,24 +127,23 @@ function App() {
                 <div>
                   <div className="Name">SYNOPSIS</div>
                   <div className="ls">
-                    <p>
-                      {textValue}
-                      <div className="text-control-parent">
-                        {!lengthTargetFulfilled ? (
-                          <div className="text-control">|</div>
-                        ) : undefined}
-                      </div>
-                    </p>
+                    <audio src={audioFile} autoPlay></audio>
+                    <Synopsis
+                      lengthTargetFulfilled={lengthTargetFulfilled}
+                      functionCaller={() => parentClass()}
+                    />
                   </div>
                 </div>
                 <div className="permission-declare">
-                  {lengthTargetFulfilled ? (
+                  {parentName ? (
                     <p>
-                      :Do you want to Declare Oracle Open: y/n: {keyValue}
+                      <audio src={declare} autoPlay />
+                      :Declare Oracle Open: y/n: {keyValue}
                       <div className="text-control">|</div>
                     </p>
                   ) : undefined}
                 </div>
+
                 {((enterValueFinal && keyValue === "Y") || keyValue === "y") &&
                   myFunction()}
               </div>
