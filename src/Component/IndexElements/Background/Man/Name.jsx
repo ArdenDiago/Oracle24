@@ -1,16 +1,19 @@
 import "./Name.css";
-
+import Conformation from "../Conformation/Conformation";
 import { useState, useEffect } from "react";
 
 export default function Name({ x, y }) {
   const [textValue, setTextValue] = useState("");
+  const [lengthTargetFulfilled, setLengthTarget] = useState(0);
   const lenOfText = y.length;
-  const timeout = 50;
+  const timeout = 1;
 
   useEffect(() => {
     setTimeout(() => {
       if (textValue.length !== lenOfText) {
         setTextValue((prevText) => prevText + y[textValue.length]); // Append character at the current length of textValue
+      }else {
+        setLengthTarget(() => !lengthTargetFulfilled);
       }
     }, timeout);
   }, [textValue, lenOfText, y]);
@@ -25,17 +28,22 @@ export default function Name({ x, y }) {
 
           <div className="header-command-name left">{x}</div>
         </div>
+        {/* About the Event */}
         <div>
           <div className="Name">{x}</div>
           <div className="ls">
             <p>
               {textValue}
-              <div className="text-control-parent">
+              {!lengthTargetFulfilled ?
+              (<div className="text-control-parent">
                 <div className="text-control">|</div>
-              </div>
+              </div>):undefined}
             </p>
           </div>
         </div>
+        {/* Permission to declare */}
+        {lengthTargetFulfilled ?
+        <Conformation />: undefined}
       </div>
     </>
   );

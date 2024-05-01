@@ -17,6 +17,7 @@
 }
 .background-width {
   width: 100%;
+  overflow: scroll; 
 }
 .header-name {
   display: grid;
@@ -38,13 +39,6 @@
 .text-control-parent {
     display: inline;
     padding-left: 5px;
-}
-.text-control {
-    display: inline;
-    color: #606060;
-    background-color: #606060;
-    -webkit-animation: blink 1s step-end infinite;
-    animation: blink 1s step-end infinite;  
 }
 
 @-webkit-keyframes blink {
@@ -70,3 +64,4 @@
     opacity: 1;
   }
 }
+
