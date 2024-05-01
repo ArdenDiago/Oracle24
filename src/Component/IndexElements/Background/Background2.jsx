@@ -1,10 +1,16 @@
 import { useState, useEffect } from "react";
 import "./Background2.css";
 import Name from "./Man/Name";
+import Line from "./Line/Line";
 import image from "../../../assets/Images/Logo/DeptLogo.svg";
 
 export default function Background() {
+  // Setting States for Controling the Behavior
   const [command, setCommand] = useState("");
+  const [enterValue, setEnter] = useState(0);
+  const [pageValue, setPageValue] = useState(0);
+
+  // Controlling the key function
   useEffect(() => {
     document.addEventListener("keydown", detectKeyDown, true);
   }, []);
@@ -13,19 +19,26 @@ export default function Background() {
       setCommand(() => "");
     } else if (e.key === "ArrowUp") {
       setCommand(() => "man oracle");
-    } else if (e.key === 'Enter') {
-      if (command === "man oracle") {
-        // pass
-      }
+    } else if (e.key === "Enter") {
+      setEnter(() => !enterValue);
     }
-    console.log(e.key);
   };
+
+  // Controling the Behavior for the pages
+  useEffect(() => {
+    if ((command === "man oracle") & enterValue) {
+      setPageValue(() => !pageValue);
+      setCommand("");
+      setEnter(0);
+    }
+  });
+
   return (
     <>
       <div className="master-div">
         <div className="header-nav">
           <div className="header-nav-img">
-            <img src={image}/>
+            <img src={image} />
           </div>
           <div className="header-nav-text">
             <h1>Pegasus@localhost</h1>
@@ -44,7 +57,8 @@ export default function Background() {
           </div>
         </div>
         <div className="myTer">
-          {/* <Name x="Name" y = "bue"></Name> */}
+          {/* <Line intruction={command} /> */}
+          <Name x="Name" y = "bue"></Name>
         </div>
       </div>
     </>
