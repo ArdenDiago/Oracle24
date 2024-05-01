@@ -22,30 +22,25 @@ export default function Background() {
   };
   return (
     <>
-      <div className="master-div">
-        <div className="header-nav">
-          <div className="header-nav-img">
-            <img src={image}/>
-          </div>
-          <div className="header-nav-text">
-            <h1>Pegasus@localhost</h1>
-          </div>
-          <div className="header-nav-buttons">
-            <div className="header-nav-buttons-align">
-              <div className="header-nav-buttons-buttons">
-                <div className="circle-r">
-                  <span>-</span>
-                </div>
-                <div className="circle-g">
-                  <span>X</span>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="header-nav">
+        <div>
+          <h1>Terminal Logo</h1>
         </div>
         <div className="myTer">
           {/* <Name x="Name" y = "bue"></Name> */}
+        <div className="header-nav-text">
+          <h1>Pegasus</h1>
         </div>
+        <div className="header-nav-buttons">
+          <div className="circle-r"></div>
+          <div className="circle-gr"></div>
+          <div className="circle-g"></div>
+        </div>
+      </div>
+      <div className="myTer">
+        <h1>Pegasus@Localhost:</h1> <p>{command}</p>
+        <div className="text"></div>
+        <Name x="Name" y = "bue"></Name>
       </div>
     </>
   );
