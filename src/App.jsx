@@ -19,13 +19,23 @@ function App() {
     // Setting States for Controling the Behavior
     const [command, setCommand] = useState("");
     const [enterValue, setEnter] = useState(0);
-    const [pageDone, setPageDone] = useState(0);
 
     // data
     let x = "Name";
     let y =
       "Enter the digital playground, where the city's heartbeat syncs with the pulse of innovation. Welcome to the Techno Cultural Fest Oracle, where every pixel holds a secret and every line of code whispers prophecy. In this realm of digital liberation, where information is power and connection is key, we harness the power of technology to unlock the mysteries of tomorrow. So, fellow hackers, gear up, plug in, and let the revolution begin. Welcome to the  Oracle, where freedom reigns supreme in the digital age";
 
+    // Second
+    const [textValue, setTextValue] = useState("");
+    const [lengthTargetFulfilled, setLengthTargetFulfilled] = useState(0);
+    const lenOfText = y.length;
+    const timeout = 50;
+    // Third
+    const [keyValue, setKeyValue] = useState("");
+    const [enterValueFinal, setEnterValueFinal] = useState(0);
+    const [change, setChange] = useState(0);
+
+    // First
     // Controlling the key function
     useEffect(() => {
       document.addEventListener("keydown", detectKeyDown, true);
@@ -46,12 +56,7 @@ function App() {
         }
       }
     };
-    // Second
-    const [textValue, setTextValue] = useState("");
-    const [lengthTargetFulfilled, setLengthTargetFulfilled] = useState(0);
-    const lenOfText = y.length;
-    const timeout = 5;
-
+    // second
     useEffect(() => {
       setTimeout(() => {
         if (textValue.length !== lenOfText) {
@@ -62,9 +67,6 @@ function App() {
       }, timeout);
     }, [textValue, lenOfText, y]);
     // Third
-    const [keyValue, setKeyValue] = useState("");
-    const [enterValueFinal, setEnterValueFinal] = useState(0);
-    const [change, setChange] = useState(0);
 
     useEffect(() => {
       document.addEventListener("keypress", detectKey, true);
@@ -153,7 +155,7 @@ function App() {
   }
 
   // ------------------------------------------
-  return <>{!page ?<Background />  : <Second/>}</>;
+  return <>{!page ? <Background /> : <Second />}</>;
 }
 
 export default App;
