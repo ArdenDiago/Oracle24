@@ -12,3 +12,6 @@
     animation: blink 1s step-end infinite;  
 }
 
+input {
+  visibility: hidden;
+}

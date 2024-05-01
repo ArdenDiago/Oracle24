@@ -1,4 +1,4 @@
-import './Line.css';
+// import './Line.css';
 export default function Line({intruction}) {
   return (
     <>
