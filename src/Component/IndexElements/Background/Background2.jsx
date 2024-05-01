@@ -13,7 +13,8 @@ export default function Background() {
       setCommand(() => "");
     } else if (e.key === "ArrowUp") {
       setCommand(() => "man oracle");
-    }
+    } 
+    console.log(e.key);
   };
   return (
     <>

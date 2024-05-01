@@ -87,8 +87,8 @@ height: 60px;
 .text { 
   position: relative;
   color: white;
-  top: 99px;
-  left: 9px;
+  top: 90px;
+  left: 20px;
 }
 
 .text::after {
