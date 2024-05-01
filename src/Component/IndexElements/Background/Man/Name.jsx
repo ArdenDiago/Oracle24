@@ -9,6 +9,7 @@ export default function Name({x,y}){
         <div className="ls">
             {y}
         </div>
+       
 
     </div>
     </>
