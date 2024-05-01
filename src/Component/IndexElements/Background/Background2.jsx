@@ -32,7 +32,7 @@ export default function Background() {
       <div className="myTer">
         <h1>Pegasus@Localhost:</h1> <p>{command}</p>
         <div className="text"></div>
-        <Name x="Name" y = "bue"></Name>
+        <Name x="Welcome, Player" y = "Welcome, techno-travelers, to the digital nexus where bytes and beats converge. Behold the pulsating heart of the Techno Cultural Fest Oracle, where the city's rhythms are our code and innovation our creed. In this sprawling metropolis of endless possibilities, every keystroke echoes a revolution, every algorithm a prophecy. So, plug into the network, embrace the data stream, for here, in the neon-lit labyrinth of the future, we are the architects of our destiny. Welcome to the age of Techno Liberation!"></Name>
       </div>
     </>
   );
