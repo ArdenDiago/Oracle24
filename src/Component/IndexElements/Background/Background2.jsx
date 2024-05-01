@@ -13,7 +13,11 @@ export default function Background() {
       setCommand(() => "");
     } else if (e.key === "ArrowUp") {
       setCommand(() => "man oracle");
-    } 
+    } else if (e.key === 'Enter') {
+      if (command === "man oracle") {
+        // pass
+      }
+    }
     console.log(e.key);
   };
   return (
@@ -40,8 +44,6 @@ export default function Background() {
           </div>
         </div>
         <div className="myTer">
-          <h1>Pegasus@Localhost:~$</h1> <p>{command}</p>
-          <div className="text"></div>
           {/* <Name x="Name" y = "bue"></Name> */}
         </div>
       </div>
