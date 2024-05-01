@@ -5,11 +5,12 @@
   z-index: 1;
 }
 
-h1 {
+.alignDiv >h1 {
   font-size: 20em;
   font-family: "Caveat", cursive;
   position: absolute;
-  top: 400px;
+  top: -400px;
+  /* top: 400px; */
   padding-top: 100vh;
 }
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import wel from "./welcome.module.css";
+import "./welcome.css";
 
 export default function Welcome() {
   const [isActive, setIsActive] = useState(false);
@@ -14,8 +14,8 @@ export default function Welcome() {
   }, []);
 
   return (
-    <div className={wel.welcome}>
-      <ul className={isActive ? wel.active : ""}>
+    <div className="welcome">
+      <ul className={isActive ? "active" : ""}>
         <li data-letter="W"></li>
         <li data-letter="E"></li>
         <li data-letter="L"></li>

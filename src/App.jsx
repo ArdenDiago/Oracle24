@@ -153,7 +153,7 @@ function App() {
   }
 
   // ------------------------------------------
-  return <>{!page ?<Background />  : <Second renderEFX={1}/>}</>;
+  return <>{!page ?<Background />  : <Second/>}</>;
 }
 
 export default App;
