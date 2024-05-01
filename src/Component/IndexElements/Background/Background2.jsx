@@ -8,6 +8,7 @@ export default function Background() {
   // Setting States for Controling the Behavior
   const [command, setCommand] = useState("");
   const [enterValue, setEnter] = useState(1);
+  const [enterValue, setEnter] = useState(0);
   const [pageValue, setPageValue] = useState(0);
 
   // Controlling the key function
@@ -34,6 +35,12 @@ export default function Background() {
       setPageValue(() => !pageValue);
     }
   });
+      setPageValue(() => !pageValue);
+      setCommand("");
+      setEnter(0);
+    }
+  });
+
   return (
     <>
       <div className="master-div">
@@ -66,6 +73,8 @@ export default function Background() {
               y="Enter the digital playground, where the city's heartbeat syncs with the pulse of innovation. Welcome to the Techno Cultural Fest Oracle, where every pixel holds a secret and every line of code whispers prophecy. In this realm of digital liberation, where information is power and connection is key, we harness the power of technology to unlock the mysteries of tomorrow. So, fellow hackers, gear up, plug in, and let the revolution begin. Welcome to the  Oracle, where freedom reigns supreme in the digital age"
             ></Name>
           )}
+          {/* <Line intruction={command} /> */}
+          <Name x="Name" y = "Enter the digital playground, where the city's heartbeat syncs with the pulse of innovation. Welcome to the Techno Cultural Fest Oracle, where every pixel holds a secret and every line of code whispers prophecy. In this realm of digital liberation, where information is power and connection is key, we harness the power of technology to unlock the mysteries of tomorrow. So, fellow hackers, gear up, plug in, and let the revolution begin. Welcome to the  Oracle, where freedom reigns supreme in the digital age"></Name>
         </div>
       </div>
     </>
