@@ -8,6 +8,7 @@
 .alignDiv >h1 {
   font-size: 20em;
   font-family: "Caveat", cursive;
+  display: inline;
   position: absolute;
   left: 200px;
   top: -690px;
