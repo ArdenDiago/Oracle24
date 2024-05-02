@@ -9,7 +9,8 @@
   font-size: 20em;
   font-family: "Caveat", cursive;
   position: absolute;
-  top: -400px;
+  left: 200px;
+  top: -690px;
   /* top: 400px; */
   padding-top: 100vh;
 }

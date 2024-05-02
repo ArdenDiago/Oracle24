@@ -15,7 +15,7 @@
   position: absolute;
   background-color: inherit;
   height: 92.6%;
-  width: 98.4%;
+  width: 100%;
 }
 .myTer h1 {
   font-family: "Cascadia Code", sans-serif;
@@ -38,6 +38,7 @@
     border-radius: 10px;
 }
 .header-nav-text {
+  font-family: "Ubuntu", sans-serif;
     text-align: center;
 }
 .header-nav-buttons {

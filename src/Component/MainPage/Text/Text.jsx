@@ -29,6 +29,9 @@ export default function Text() {
           <span>C</span>
           <span>L</span>
           <span>E</span>
+          <span> </span>
+          <span>2</span>
+          <span>4</span>
         </h1>
       </div>
     </>

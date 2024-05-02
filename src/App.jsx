@@ -117,7 +117,7 @@ function App() {
             ) : (
               <div className="background-width">
                 <div className="header-name">
-                  <div className="header-command-name">{x}</div>
+                  <div className="header-command-name header-command-name-left">{x}</div>
                   <div className="header-command-name">
                     <p>INTRA DEPARTMENT TECHNO-CULTURAL FEST</p>
                   </div>
