@@ -6,16 +6,18 @@
 100% = 16
  */
 .master-div {
-  background-color: rgba(2, 2, 2, 0.986);
+  background-color: rgba(51, 51, 51, 0.986);
 }
 .myTer {
-  color: rgb(9, 255, 0);
+  color: rgb(101, 248, 96);
   display: flex;
   overflow: hidden;
   position: absolute;
   background-color: inherit;
   height: 92.6%;
   width: 100%;
+  /* -webkit-text-stroke-width: 1.5px; */
+  -webkit-text-stroke-color: rgba(253, 253, 253, 0.555);
 }
 .myTer h1 {
   font-family: "Cascadia Code", sans-serif;
