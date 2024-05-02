@@ -30,6 +30,7 @@ export default function Text() {
           <span>L</span>
           <span>E</span>
           <span> </span>
+          <span>'</span>
           <span className="increse24">
             <span>2</span>
             <span>4</span>
