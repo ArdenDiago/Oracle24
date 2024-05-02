@@ -14,7 +14,7 @@ export default function Text() {
       if (activeClass !== listLength - 1) {
         setClass((prevIsActive) => prevIsActive + 1);
       } else {
-        setClass(() => listLength - 1)
+        setClass(() => listLength - 1);
       }
     }, 5000);
   }
@@ -30,8 +30,10 @@ export default function Text() {
           <span>L</span>
           <span>E</span>
           <span> </span>
-          <span>2</span>
-          <span>4</span>
+          <span className="increse24">
+            <span>2</span>
+            <span>4</span>
+          </span>
         </h1>
       </div>
     </>
